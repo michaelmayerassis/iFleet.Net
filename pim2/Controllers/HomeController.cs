@@ -23,6 +23,14 @@ namespace pim2.Controllers
             return RedirectToAction("Index", "Pecas");
         }
 
+        public async Task<IActionResult> Login()
+        {
+            return View();
+        }
 
+        public IActionResult CreateEmpresa()
+        {
+            return RedirectToAction("Create", "Empresas");
+        }
     }
 }

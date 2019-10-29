@@ -48,3 +48,4 @@ C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\pim2.dll
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\pim2.pdb
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\pim2.csproj.CopyComplete
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\pim2.csprojAssemblyReference.cache
+C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Login.cshtml.g.cs
