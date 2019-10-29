@@ -1,0 +1,56 @@
+﻿@model pim2.Models.Peca
+
+@{
+    ViewData["Title"] = "Delete";
+}
+    <link href="~/css/style.css" rel="stylesheet" />
+<h2>Deletar peça</h2>
+
+<h3>Você tem certeza que quer deletar a peça?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Prateleira)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Prateleira)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EstoqueMinimo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EstoqueMinimo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Deletar" class="btn btn-default" /> |
+        <a asp-action="Index"><input type="button" value="Cancelar" class="btn btn-default" /></a>
+    </form>
+</div>

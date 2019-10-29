@@ -1,0 +1,92 @@
+﻿@model pim2.Models.Peca
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+
+<link href="~/css/style.css" rel="stylesheet" />
+<!-- HEADER -->
+<div class="header">
+
+    <h1 class="title-font">iFleet</h1>
+
+    <nav class="header-nav">
+        <ul class="header-nav-menu">
+            <li class="header-menu-item"><a href="#iFleet">Por que nós</a></li>
+            <li class="header-menu-item"><a href="#sobre">Sobre</a></li>
+            <li class="header-menu-item"><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="header-btn">
+        <a asp-action="Pecas" class="header-btn-portal">Entrar</a>
+    </div>
+</div>
+<!-- END HEADER -->
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-text">
+        <h2 class="hero-title">iFleet</h2>
+        <p class="hero-paragraph">O melhor sistema para controle da sua frota</p>
+    </div>
+
+    <a href="" class="hero-btn">Ir ao portal</a>
+</section>
+<!-- END HERO -->
+<!-- MAIN -->
+<section class="main">
+
+    <div class="main-ifleet">
+        <h2 id="iFleet" class="title-font">Porque o iFleet?</h2>
+
+        <div class="flex">
+            <div class="main-card">
+                <div class="main-card-image">
+                    <img src="~/images/banco-de-dados.png" alt="" />
+                </div>
+                <div class="main-card-text">
+                    <h3>Segurança</h3>
+                    <p>
+                        O sistema por ser do tipo cliente servidor permite a configuração de backup(s) para subisidiar a perda de dados, além de comportar praticas para proteger a integridade e a segurança dos dados ou informações dos clientes!
+                    </p>
+                </div>
+            </div>
+
+            <div class="main-card">
+                <div class="main-card-image">
+                    <img src="~/images/grafico.png" alt="" />
+                </div>
+                <div class="main-card-text">
+                    <h3>Controle</h3>
+                    <p>O sistema permite gerenciar uma frota de veiculos, a medida em que o cliente dispõe informações para que assim o sistema seja efetivamente pratico.</p>
+                </div>
+            </div>
+
+            <div class="main-card">
+                <div class="main-card-image">
+                    <img src="~/images/frota.png" alt="" />
+                </div>
+                <div class="main-card-text">
+                    <h3>Frota</h3>
+                    <p> O sistema armazena os dados de uma frota podendo ser registrado as manutenções e viagens do mesmo, além de poder registar o consumo de combustivel,quilometragem dentre outras coisas.</p>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- END MAIN-IFLEET-->
+</section>
+<!-- END MAIN -->
+
+
+<section class="about">
+    <h2 id="sobre" class="about-title title-font pa">Sobre nós</h2>
+    <p class="pa">
+        Por ser uma empresa sedimentada no ramo de TI, podemos citar como base que nossa relação e conversa
+        com nossos clientes ocorre de maneira fluida e confiavél, permitindo assim compreendermos e retornarmos
+        a expectativa deles para conosco, retribuindo sempre com um otimo software de qualidade e praticidade!
+        Além de nosso foco ser a tecnologia, contribuimos com a natureza também em prol de um mundo melhor!
+        Possuimos o chamado TI verde, que visa criar projetos de conscientização a preservação a nossa fauna e nossa flora!
+        qualquer duvida entre em contato conosco e conheça a 2VJMIG.
+    </p>
+</section>

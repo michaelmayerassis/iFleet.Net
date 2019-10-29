@@ -1,0 +1,72 @@
+﻿@model IEnumerable<pim2.Models.Peca>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link href="~/css/style.css" rel="stylesheet" />
+<!-- HEADER -->
+<div class="header">
+
+    <h1 class="title-font">Controle de peças</h1>
+
+    <nav class="header-nav">
+        <ul class="header-nav-menu">
+            <li class="header-menu-item"><a asp-action="Home" class="header-btn-portal">Inicio</a></li>
+            <li class="header-menu-item"><a asp-action="Create" class="header-btn-portal">Cadastrar peça +</a></li>
+</ul>
+    </nav>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prateleira)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstoqueMinimo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prateleira)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstoqueMinimo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Valor)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id"><input type="button" value="Alterar" class="btn btn-default" /></a> 
+                <a asp-action="Delete" asp-route-id="@item.Id"><input type="button" value="Deletar" class="btn btn-default" /></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
