@@ -37,9 +37,39 @@
     text-decoration: none;
 }
 
-.btn-color{ background-color: white !important;}
+.login__form{
+    height: 110vh;
+}
 
-
-.d-flex{
+.login__bgimage{
+    /*background-image: url("../images/hero.jpg");
+    background-position: center;
+    background-size: cover;*/
+    background: linear-gradient(180deg, rgba(0,212,255,1) 2%, rgba(54,78,255,1) 45%, rgba(0,212,255,1) 100%);
     display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 110vh;
+}
+
+.login__bgimage > div h1{
+    font-size: 9rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: white;
+    margin: 0 0 10px 0;
+}
+
+.login__bgimage > div h3{
+    margin: 0;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    color: white; 
+}
+
+.login__form {
+    display: grid;
+    align-items: center;
+    width: 400px;
+    margin: 0 auto;
 }
