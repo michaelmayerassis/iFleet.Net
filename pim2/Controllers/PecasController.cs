@@ -17,10 +17,6 @@ namespace pim2.Controllers
         {
             _context = context;
         }
-        public IActionResult Home()
-        {
-            return RedirectToAction("Home", "Home");
-        }
 
         // GET: Pecas
         public async Task<IActionResult> Index()
@@ -61,6 +57,7 @@ namespace pim2.Controllers
         {
             if (ModelState.IsValid)
             {
+                //peca.Valor = peca.Valor / 100;
                 _context.Add(peca);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

@@ -30,7 +30,7 @@ namespace pim2.Controllers
 
         public IActionResult CreateEmpresa()
         {
-            return RedirectToAction("Create", "Empresas");
+            return RedirectToAction("Index", "Empresas");
         }
     }
 }

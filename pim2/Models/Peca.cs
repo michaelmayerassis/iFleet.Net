@@ -57,10 +57,9 @@ namespace pim2.Models
             }
         }
 
-        private Decimal _valor;
-        [DataType(DataType.Currency)]
-        [Column(TypeName = "money")]
-        public decimal Valor
+        private float _valor;
+        [Column(TypeName ="decimal(10,2)")]
+        public float Valor
         {
             get => _valor;
             set
@@ -75,7 +74,7 @@ namespace pim2.Models
             return qtd >= 0;
         }
 
-        private bool isValorValida(decimal qtd)
+        private bool isValorValida(float qtd)
         {
             return qtd > 0;
         }

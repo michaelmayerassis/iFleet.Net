@@ -3,9 +3,10 @@
 @{
     ViewData["Title"] = "Create";
 }
-<link href="~/css/style.css" rel="stylesheet" />
-<h2>Cadastrar peça</h2>
 
+<h2>Create</h2>
+
+<h4>Peca</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -38,19 +39,23 @@
             </div>
             <div class="form-group">
                 <label asp-for="Valor" class="control-label"></label>
-                <input asp-for="Valor" class="form-control" />
+                <input asp-for="Valor" type="number" class="form-control" />
                 <span asp-validation-for="Valor" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Salvar" class="btn btn-default" /> |
-                <a asp-action="Index"><input type="button" value="Cancelar" class="btn btn-default" /></a>
+                <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
+    <a asp-action="Index">Back to List</a>
 </div>
+
+<script>
+    console.log();
+</script>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

@@ -21,6 +21,7 @@ C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Empres
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Empresas\Edit.cshtml.g.cs
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Empresas\Index.cshtml.g.cs
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Home.cshtml.g.cs
+C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Login.cshtml.g.cs
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Motoristas\Create.cshtml.g.cs
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Motoristas\Delete.cshtml.g.cs
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Motoristas\Details.cshtml.g.cs
@@ -28,6 +29,7 @@ C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Motori
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Motoristas\Index.cshtml.g.cs
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Pecas\Create.cshtml.g.cs
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Pecas\Delete.cshtml.g.cs
+C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Pecas\Details.cshtml.g.cs
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Pecas\Edit.cshtml.g.cs
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Pecas\Index.cshtml.g.cs
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
@@ -48,4 +50,3 @@ C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\pim2.dll
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\pim2.pdb
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\pim2.csproj.CopyComplete
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\pim2.csprojAssemblyReference.cache
-C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Login.cshtml.g.cs
