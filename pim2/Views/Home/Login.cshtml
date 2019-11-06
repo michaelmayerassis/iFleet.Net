@@ -1,0 +1,44 @@
+﻿@model pim2.Models.Login
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5 col-xs-12">
+                <div class="login__header">
+
+                </div>
+                <div class="login__form">
+                <form asp-action="View">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="usuario" class="control-label"></label>
+                            <input asp-for="usuario" class="form-control" />
+                            <span asp-validation-for="usuario" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="senha" class="control-label"></label>
+                            <input asp-for="senha" class="form-control" />
+                            <span asp-validation-for="senha" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Entrar" class="btn btn-default btn-color" /> |
+                            <a asp-action="CreateEmpresa"><input type="button" value="Cadastrar empresa" class="btn btn-default" /></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-7 login__bgimage">
+                <div>
+                    <h1>Bem-Vindo ao iFleet</h1>
+                    <h3>Faça login para acessar sua conta</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
