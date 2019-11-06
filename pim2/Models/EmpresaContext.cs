@@ -11,5 +11,6 @@ namespace pim2.Models
         public DbSet<Empresa> Empresas { get; set; }
 
         public EmpresaContext(DbContextOptions<EmpresaContext> options) : base(options) { }
+
     }
 }

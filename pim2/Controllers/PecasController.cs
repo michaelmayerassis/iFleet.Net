@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using pim2.Models;
 
-namespace pim2.Controllers
+namespace iFleetWeb.Controllers
 {
     public class PecasController : Controller
     {
@@ -57,7 +57,6 @@ namespace pim2.Controllers
         {
             if (ModelState.IsValid)
             {
-                //peca.Valor = peca.Valor / 100;
                 _context.Add(peca);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

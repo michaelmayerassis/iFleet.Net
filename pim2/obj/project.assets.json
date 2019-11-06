@@ -12791,9 +12791,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\55169\\source\\repos\\pim2\\pim2\\pim2.csproj",
-      "projectName": "pim2",
-      "projectPath": "C:\\Users\\55169\\source\\repos\\pim2\\pim2\\pim2.csproj",
+      "projectUniqueName": "C:\\Users\\55169\\source\\repos\\pim2\\pim2\\iFleetWeb.csproj",
+      "projectName": "iFleetWeb",
+      "projectPath": "C:\\Users\\55169\\source\\repos\\pim2\\pim2\\iFleetWeb.csproj",
       "packagesPath": "C:\\Users\\55169\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\55169\\source\\repos\\pim2\\pim2\\obj\\",
       "projectStyle": "PackageReference",

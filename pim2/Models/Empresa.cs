@@ -20,5 +20,6 @@ namespace pim2.Models
         public int numero { get; set; }
         public String cidade { get; set; }
         public String bairro { get; set; }
+        public String senha { get; set; }
     }
 }

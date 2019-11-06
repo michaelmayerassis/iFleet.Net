@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -152,6 +155,82 @@ namespace pim2.Controllers
         private bool EmpresaExists(int id)
         {
             return _context.Empresas.Any(e => e.Id == id);
+        }
+
+        public IActionResult LoginPage()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("UserPage");
+            }
+
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> LoginPage(Empresa empresa)
+        {
+            var empresaLogin = await _context.Empresas
+                .FirstOrDefaultAsync(m => m.email == empresa.email && m.senha == empresa.senha);
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    //aqui poderia ter alguma requisição para base de dados, estou usando dados estáticos para não complicar
+                    if (empresaLogin != null)
+                    {
+                        Login(empresa);
+                        return RedirectToAction("UserPage");
+                    }
+                    else
+                    {
+                        ViewBag.Erro = "Usuário e / ou senha incorretos!";
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                ViewBag.Erro = "Ocorreu algum erro ao tentar se logar, tente novamente!";
+            }
+            return View();
+        }
+
+        private async void Login(Empresa empresa)
+        {
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, empresa.email),
+                new Claim(ClaimTypes.Role, "Usuario_Comum")
+            };
+
+            var identidadeDeEmpresas = new ClaimsIdentity(claims, "Login");
+            ClaimsPrincipal claimPrincipal = new ClaimsPrincipal(identidadeDeEmpresas);
+
+            var propriedadesDeAutenticacao = new AuthenticationProperties
+            {
+                AllowRefresh = true,
+                ExpiresUtc = DateTime.Now.ToLocalTime().AddHours(2),
+                IsPersistent = true
+            };
+
+            await HttpContext.SignInAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationDefaults.AuthenticationScheme, claimPrincipal, propriedadesDeAutenticacao);
+        }
+
+        [Authorize]
+        public IActionResult UserPage()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Home");
+        }
+
+        public IActionResult Empresas()
+        {
+            return RedirectToAction("Index", "Empresas");
         }
     }
 }
