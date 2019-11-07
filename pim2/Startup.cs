@@ -40,6 +40,7 @@ namespace pim2
             services.AddDbContext<EmpresaContext>(options => options.UseMySql(connection));
             services.AddDbContext<PecaContext>(options => options.UseMySql(connection));
             services.AddDbContext<VeiculoContext>(options => options.UseMySql(connection));
+            services.AddDbContext<MotoristaContext>(options => options.UseMySql(connection));
 
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -47,6 +48,10 @@ namespace pim2
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+
+            //adicionando o serviço de cookies na aplicação
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options => options.LoginPath = "/Home/Home");
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

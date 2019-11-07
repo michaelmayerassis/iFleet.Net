@@ -28,7 +28,10 @@ namespace pim2.Controllers
 
         public IActionResult LoginPage()
         {
-
+            if (User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("UserPage");
+            }
             return View();
         }
 
@@ -40,6 +43,7 @@ namespace pim2.Controllers
                     //aqui poderia ter alguma requisição para base de dados, estou usando dados estáticos para não complicar
             if (empresaDAO.RetornarLogin(empresa.email, empresa.senha)) 
             {
+                Login(empresa);
                 return RedirectToAction("UserPage");
             }else
                  {
@@ -50,7 +54,28 @@ namespace pim2.Controllers
             
         }
 
-       
+        private async void Login(Empresa empresa)
+        {
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, empresa.nome),
+                new Claim(ClaimTypes.Role, "Usuario_Comum")
+            };
+
+            var identidadeDeUsuario = new ClaimsIdentity(claims, "Login");
+            ClaimsPrincipal claimPrincipal = new ClaimsPrincipal(identidadeDeUsuario);
+
+            var propriedadesDeAutenticacao = new AuthenticationProperties
+            {
+                AllowRefresh = true,
+                ExpiresUtc = DateTime.Now.ToLocalTime().AddHours(2),
+                IsPersistent = true
+            };
+
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimPrincipal, propriedadesDeAutenticacao);
+        }
+
+        [Authorize]
         public IActionResult UserPage()
         {
             return View();
@@ -68,9 +93,19 @@ namespace pim2.Controllers
         }
 
        
-        public IActionResult CreateEmpresa()
+        public IActionResult Empresas()
         {
             return RedirectToAction("Index", "Empresas");
+        }
+
+        public IActionResult Motoristas()
+        {
+            return RedirectToAction("Index", "Motoristas");
+        }
+
+        public IActionResult Veiculos()
+        {
+            return RedirectToAction("Index", "Veiculoes");
         }
     }
 }
