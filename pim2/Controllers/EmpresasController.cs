@@ -12,6 +12,7 @@ using pim2.Models;
 
 namespace pim2.Controllers
 {
+    [Authorize]
     public class EmpresasController : Controller
     {
         private readonly EmpresaContext _context;

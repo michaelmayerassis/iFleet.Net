@@ -44,7 +44,6 @@ C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.dll
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.pdb
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.csproj.CopyComplete
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.csprojAssemblyReference.cache
-C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Logout.cshtml.g.cs
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\UserPage.cshtml.g.cs
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\LoginPage.cshtml.g.cs
 C:\Users\55169\source\repos\pim2\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Pecas\Create.cshtml.g.cs

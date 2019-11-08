@@ -80,7 +80,7 @@ using pim2.Models;
             WriteLiteral("</h2>\r\n        <br><br>\r\n        ");
             EndContext();
             BeginContext(148, 69, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "350c3d74ea134ca0890b7536c35fb889", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a996970e161b4faa83b14f225b03df90", async() => {
                 BeginContext(196, 17, true);
                 WriteLiteral("Realizar o logout");
                 EndContext();
@@ -102,7 +102,7 @@ using pim2.Models;
             WriteLiteral("\r\n        ");
             EndContext();
             BeginContext(227, 69, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ae8a7b9545ef44c6bf8a86fa72764ffd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1afc1a8316fc4acf8787b22aa260ec9a", async() => {
                 BeginContext(272, 20, true);
                 WriteLiteral("Cadastro de Empresas");
                 EndContext();
@@ -125,7 +125,7 @@ using pim2.Models;
             WriteLiteral("\r\n        ");
             EndContext();
             BeginContext(306, 73, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c7ece2bd5774df996de8a9603b50a26", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "48e48408ed8d4dc6830f078880905d50", async() => {
                 BeginContext(353, 22, true);
                 WriteLiteral("Cadastro de motoristas");
                 EndContext();
@@ -148,7 +148,7 @@ using pim2.Models;
             WriteLiteral("\r\n        ");
             EndContext();
             BeginContext(389, 69, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "903cea94f1fe40bdbba8548be187bc75", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ca3de5a6b5d249118727bd631b58a108", async() => {
                 BeginContext(434, 20, true);
                 WriteLiteral("Cadastro de veiculos");
                 EndContext();
@@ -171,7 +171,7 @@ using pim2.Models;
             WriteLiteral("\r\n        ");
             EndContext();
             BeginContext(468, 63, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "939f93af3b844921bd5fc27621b7439c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7f7969e688d443d7b4b08d07b7b1f16e", async() => {
                 BeginContext(510, 17, true);
                 WriteLiteral("Cadastro de peças");
                 EndContext();

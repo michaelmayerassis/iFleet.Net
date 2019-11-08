@@ -13,13 +13,6 @@ namespace pim2.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly EmpresaContext _context;
-
-        public HomeController(EmpresaContext context)
-        {
-            _context = context;
-        }
-
         // GET: Home/Details/5
         public IActionResult Home()
         {
@@ -58,7 +51,7 @@ namespace pim2.Controllers
         {
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, empresa.nome),
+                new Claim(ClaimTypes.Name, empresa.email),
                 new Claim(ClaimTypes.Role, "Usuario_Comum")
             };
 
