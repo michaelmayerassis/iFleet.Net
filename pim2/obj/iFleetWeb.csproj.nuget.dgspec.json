@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\55169\\source\\repos\\pim2\\pim2\\iFleetWeb.csproj": {}
+    "C:\\Users\\joaovizu\\Desktop\\iFleet\\iFleet.Net\\pim2\\iFleetWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\55169\\source\\repos\\pim2\\pim2\\iFleetWeb.csproj": {
+    "C:\\Users\\joaovizu\\Desktop\\iFleet\\iFleet.Net\\pim2\\iFleetWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\55169\\source\\repos\\pim2\\pim2\\iFleetWeb.csproj",
+        "projectUniqueName": "C:\\Users\\joaovizu\\Desktop\\iFleet\\iFleet.Net\\pim2\\iFleetWeb.csproj",
         "projectName": "iFleetWeb",
-        "projectPath": "C:\\Users\\55169\\source\\repos\\pim2\\pim2\\iFleetWeb.csproj",
-        "packagesPath": "C:\\Users\\55169\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\55169\\source\\repos\\pim2\\pim2\\obj\\",
+        "projectPath": "C:\\Users\\joaovizu\\Desktop\\iFleet\\iFleet.Net\\pim2\\iFleetWeb.csproj",
+        "packagesPath": "C:\\Users\\joaovizu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joaovizu\\Desktop\\iFleet\\iFleet.Net\\pim2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\55169\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\joaovizu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
@@ -84,16 +82,10 @@
             }
           },
           "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
+            "net461"
           ],
           "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "warn": true
         }
       }
     }

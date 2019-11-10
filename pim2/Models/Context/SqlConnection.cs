@@ -13,7 +13,7 @@ namespace pim2.Models
 
         public SqlConnection()
         {
-            connectionString = "server=localhost;database=pim;userid=root;password=2303;";
+            connectionString = "server=localhost;database=pim;userid=root;password=;";
         }
 
         public MySqlConnection Criar()
