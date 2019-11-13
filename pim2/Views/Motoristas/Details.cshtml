@@ -1,0 +1,90 @@
+﻿@model pim2.Models.Motorista
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Motorista</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CNH)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CNH)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Categoria_Cnh)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Categoria_Cnh)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Dt_Nascimento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Dt_Nascimento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Exame_medico)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Exame_medico)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.endereco)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.endereco)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.numero)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.numero)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.cidade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.cidade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bairro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bairro)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CEP)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CEP)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

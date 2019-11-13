@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewData["Title"] = "UserPage";
+}
+
+    <center>
+        <h2>Usuário @User.Identity.Name</h2>
+        <br><br>
+        <a href="~/Home/Logout" class="btn btn-warning">Realizar o logout</a>
+        <div class="userPage__menu">
+            
+            <div class="userPage__card">
+                <div class="userPage__card__image">
+                    <img  src="~/images/empresa.gif"/>
+                </div>
+                <div class="userPage__card__title">
+                    <a asp-action="Empresas" class="btn-default">Empresas</a>
+                </div>
+            </div>
+
+            <a  asp-action="Motoristas">
+                <div class="userPage__card" asp-action="Motoristas">
+                    <div class="userPage__card__image">
+                        <img src="~/images/motorista.gif" />
+                    </div>
+                    <div class="userPage__card__title">
+                        <p  class="btn-default">Cadastro de motoristas</p>
+                    </div>
+                </div>
+            </a>
+
+            <div class="userPage__card">
+                <div class="userPage__card__image">
+                    <img src="~/images/carro.gif" />
+                </div>
+                <div class="userPage__card__title">
+                    <a asp-action="Veiculos" class="btn-default">Cadastro de veiculos</a>
+                </div>
+            </div>
+
+            <div class="userPage__card">
+                <div class="userPage__card__image">
+
+                </div>
+                <div class="userPage__card__title">
+                    <a asp-action="Pecas" class="btn-default">Cadastro de peças</a>
+                </div>
+            </div>
+        </div>
+        
+
+    </center>
+

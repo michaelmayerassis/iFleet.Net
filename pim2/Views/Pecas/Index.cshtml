@@ -1,0 +1,82 @@
+﻿@model IEnumerable<pim2.Models.Peca>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+    <div class="header-views">
+
+        <h1 class="title-font">Controle de peças</h1>
+
+        <nav class="header-nav">
+            <ul class="header-nav-menu">
+                <li class="header-menu-item"><a asp-action="UserPage" class="header-btn-portal">Inicio</a></li>
+                <li class="header-menu-item"><a asp-action="Create" class="header-btn-portal">Cadastrar peça +</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <!--<div class="jumbotron">
+            <h2>Cadastro de Peças</h2>
+        </div>-->
+
+        <!--<button class="btn btn-default col-lg-offset-11">
+            <a asp-action="Create">Cadastrar</a>
+        </button>-->
+        <table class="table table-responsive table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Descricao)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Prateleira)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Quantidade)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.EstoqueMinimo)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Valor)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td class="text-wrap">
+                            @Html.DisplayFor(modelItem => item.Descricao)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Prateleira)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Quantidade)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EstoqueMinimo)
+                        </td>
+                        <td>
+                            R$  @Html.DisplayFor(modelItem => item.Valor)
+                        </td>
+                        <td>
+                            
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-default btn-gold"><i class="glyphicon glyphicon-pencil"></i></a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>

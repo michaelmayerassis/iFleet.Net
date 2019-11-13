@@ -1,0 +1,78 @@
+﻿@model pim2.Models.Veiculo
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+    <div class="header-views">
+
+        <h1 class="title-font">Controle de veículos</h1>
+
+        <nav class="header-nav">
+            <ul class="header-nav-menu">
+                <li class="header-menu-item"><a asp-action="Home" class="header-btn-portal">Inicio</a></li>
+                <li class="header-menu-item"><a asp-action="Create" class="header-btn-portal">Cadastrar veículo</a></li>
+            </ul>
+        </nav>
+    </div>
+<div class="container">
+    <h4 class="text-danger">Deseja realmente excluir este veículo?</h4>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ano)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ano)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Placa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Placa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Renavan)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Renavan)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Empresa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empresa.Id)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Deletar" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
