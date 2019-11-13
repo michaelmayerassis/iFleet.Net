@@ -7,11 +7,7 @@
 {
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12 login__bgimage">
-                <div class="login__title">
-                    <h1>Bem-Vindo ao iFleet</h1>
-                    <h3>Faça login para acessar sua conta</h3>
-                </div>
+            <div class="col-md-5">
                 <div class="login__form">
                     <form asp-action="View">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -36,6 +32,13 @@
                             <a asp-action="CreateEmpresa"><input type="button" value="Cadastrar empresa" class="btn btn-default" /></a>
                         </div>
                     </form>
+                </div>
+            </div>
+
+            <div class="col-md-7 login__bgimage">
+                <div class="login__title">
+                    <h1>Bem-Vindo ao iFleet</h1>
+                    <h3>Faça login para acessar sua conta</h3>
                 </div>
             </div>
         </div>

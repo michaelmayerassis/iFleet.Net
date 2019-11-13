@@ -38,18 +38,18 @@
 }
 
 .login__form{
-    height: 110vh;
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .login__bgimage {
-    /*background-image: url("../images/hero.jpg");
-    background-position: center;
-    background-size: cover;*/
     background: linear-gradient(to right, #7474bf, #348ac7);
     display: grid;
     align-items: center;
     justify-content: center;
-    height: 110vh;
+    height: 120vh;
 }
 
 .login__bgimage > div h1{
@@ -73,7 +73,7 @@
 }
 
 .form__label{
-    color: white;
+    color: black;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -140,4 +140,3 @@
     transform: scale(0.9,0.9);
     box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), -5px -5px 30px 15px rgba(0,0,0,0.22);
 }
-

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\55169\\Downloads\\iFleet.Net-master\\pim2\\iFleetWeb.csproj": {}
+    "C:\\Users\\55169\\Downloads\\pim\\iFleet.Net\\pim2\\iFleetWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\55169\\Downloads\\iFleet.Net-master\\pim2\\iFleetWeb.csproj": {
+    "C:\\Users\\55169\\Downloads\\pim\\iFleet.Net\\pim2\\iFleetWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\55169\\Downloads\\iFleet.Net-master\\pim2\\iFleetWeb.csproj",
+        "projectUniqueName": "C:\\Users\\55169\\Downloads\\pim\\iFleet.Net\\pim2\\iFleetWeb.csproj",
         "projectName": "iFleetWeb",
-        "projectPath": "C:\\Users\\55169\\Downloads\\iFleet.Net-master\\pim2\\iFleetWeb.csproj",
+        "projectPath": "C:\\Users\\55169\\Downloads\\pim\\iFleet.Net\\pim2\\iFleetWeb.csproj",
         "packagesPath": "C:\\Users\\55169\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\55169\\Downloads\\iFleet.Net-master\\pim2\\obj\\",
+        "outputPath": "C:\\Users\\55169\\Downloads\\pim\\iFleet.Net\\pim2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
