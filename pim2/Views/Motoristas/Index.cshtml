@@ -6,106 +6,108 @@
 
 <link href="~/css/style.css" rel="stylesheet" />
 <!-- HEADER -->
-<div class="header">
+<div class="header-views">
 
-    <h1 class="title-font">Controle de peças</h1>
+    <h1 class="title-font">Controle de Motoristas</h1>
 
     <nav class="header-nav">
         <ul class="header-nav-menu">
-            <li class="header-menu-item"><a asp-action="Home" class="header-btn-portal">Inicio</a></li>
-            <li class="header-menu-item"><a asp-action="Create" class="header-btn-portal">Cadastrar peça +</a></li>
+            <li class="header-menu-item"><a asp-action="UserPage" class="header-btn-portal">Inicio</a></li>
+            <li class="header-menu-item"><a asp-action="Create" class="header-btn-portal">Cadastrar motorista</a></li>
         </ul>
     </nav>
 </div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.CPF)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CNH)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Categoria_Cnh)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Dt_Nascimento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Exame_medico)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.endereco)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.numero)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.cidade)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Bairro)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CEP)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+<div class="container">
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CPF)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CNH)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Categoria_Cnh)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Dt_Nascimento)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Exame_medico)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.email)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.endereco)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.numero)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.cidade)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Bairro)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CEP)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.CPF)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CNH)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Categoria_Cnh)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Dt_Nascimento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Exame_medico)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.endereco)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.numero)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.cidade)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Bairro)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CEP)
+                </th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CPF)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CNH)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Categoria_Cnh)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Dt_Nascimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Exame_medico)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.endereco)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.numero)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.cidade)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Bairro)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CEP)
+                    </td>
+                    <td>
+
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-default btn-gold"><i class="glyphicon glyphicon-pencil"></i></a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
