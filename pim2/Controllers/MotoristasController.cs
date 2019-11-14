@@ -24,6 +24,10 @@ namespace pim2.Controllers
             return RedirectToAction("Home", "Home");
         }
 
+        public IActionResult UserPage()
+        {
+            return RedirectToAction("UserPage", "Home");
+        }
         // GET: Motoristas
         public async Task<IActionResult> Index()
         {

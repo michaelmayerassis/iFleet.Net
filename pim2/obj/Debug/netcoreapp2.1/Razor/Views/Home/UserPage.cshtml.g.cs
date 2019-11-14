@@ -83,7 +83,7 @@ using pim2.Models;
             WriteLiteral("</h2>\r\n        <br><br>\r\n        ");
             EndContext();
             BeginContext(134, 69, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f4f8d6ccfa0240ecab303f95278a9522", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9fcb9fd5b32549b9ad9fb7d2638e66ac", async() => {
                 BeginContext(182, 17, true);
                 WriteLiteral("Realizar o logout");
                 EndContext();
@@ -105,7 +105,7 @@ using pim2.Models;
             WriteLiteral("\r\n        <div class=\"userPage__menu\">\r\n            \r\n            <div class=\"userPage__card\">\r\n                <div class=\"userPage__card__image\">\r\n                    ");
             EndContext();
             BeginContext(372, 34, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "03fdb752f76d402290d66f3c3b76a0f1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "3cad93c8ded842beafe2777e4c533f2d", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -123,7 +123,7 @@ using pim2.Models;
             WriteLiteral("\r\n                </div>\r\n                <div class=\"userPage__card__title\">\r\n                    ");
             EndContext();
             BeginContext(505, 57, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aaee091c938248e2b53a839bf97a05f5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "164d90b06e9e4cdd92b560b78302d232", async() => {
                 BeginContext(550, 8, true);
                 WriteLiteral("Empresas");
                 EndContext();
@@ -146,12 +146,12 @@ using pim2.Models;
             WriteLiteral("\r\n                </div>\r\n            </div>\r\n\r\n            ");
             EndContext();
             BeginContext(622, 448, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e66f1c08987b4e9cb875c48af37686bc", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fc90c9ef209d4febb10ac1f8a7aed246", async() => {
                 BeginContext(650, 153, true);
                 WriteLiteral("\r\n                <div class=\"userPage__card\" asp-action=\"Motoristas\">\r\n                    <div class=\"userPage__card__image\">\r\n                        ");
                 EndContext();
                 BeginContext(803, 36, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "6fdd51afb96b43b7bdc986a7a6d5a8f4", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "6b1f05011a064020b2cd364448887200", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -186,7 +186,7 @@ using pim2.Models;
             WriteLiteral("\r\n\r\n            <div class=\"userPage__card\">\r\n                <div class=\"userPage__card__image\">\r\n                    ");
             EndContext();
             BeginContext(1189, 32, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "815adccab2c34c679c1332bb70dff07c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f1a5c0fe88e545d89f4298daf377e9b6", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -204,7 +204,7 @@ using pim2.Models;
             WriteLiteral("\r\n                </div>\r\n                <div class=\"userPage__card__title\">\r\n                    ");
             EndContext();
             BeginContext(1320, 69, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e778f9e78c38408fa19109dc19fa6c4b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3d83528e34e14fe49a02576638695f4c", async() => {
                 BeginContext(1365, 20, true);
                 WriteLiteral("Cadastro de veiculos");
                 EndContext();
@@ -227,7 +227,7 @@ using pim2.Models;
             WriteLiteral("\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"userPage__card\">\r\n                <div class=\"userPage__card__image\">\r\n\r\n                </div>\r\n                <div class=\"userPage__card__title\">\r\n                    ");
             EndContext();
             BeginContext(1631, 63, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cab64ddeb894430683d474f1f0c2f49d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09d5d0af60e14247b9689b4d3db11ba9", async() => {
                 BeginContext(1673, 17, true);
                 WriteLiteral("Cadastro de peças");
                 EndContext();
