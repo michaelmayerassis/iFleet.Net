@@ -69,7 +69,7 @@ using pim2.Models;
             WriteLiteral("\r\n\r\n    <div class=\"header-views\">\r\n\r\n        <h1 class=\"title-font\">Controle de peças</h1>\r\n\r\n        <nav class=\"header-nav\">\r\n            <ul class=\"header-nav-menu\">\r\n                <li class=\"header-menu-item\">");
             EndContext();
             BeginContext(297, 61, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0059038aa8a9480cb4ba5923d473efd7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "30c4d64743a34be8809b5f17503a6d65", async() => {
                 BeginContext(348, 6, true);
                 WriteLiteral("Inicio");
                 EndContext();
@@ -92,7 +92,7 @@ using pim2.Models;
             WriteLiteral("</li>\r\n                <li class=\"header-menu-item\">");
             EndContext();
             BeginContext(410, 69, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2c7ec9e3cb3d4e20b389406a8ee69be8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "10149e830e284bb3a90dc6f9618c9124", async() => {
                 BeginContext(459, 16, true);
                 WriteLiteral("Cadastrar peça +");
                 EndContext();
@@ -260,7 +260,7 @@ using pim2.Models;
             WriteLiteral("\r\n                        </td>\r\n                        <td>\r\n                            \r\n                        ");
             EndContext();
             BeginContext(2754, 131, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eaca79afbb33484ca30347f7da693e5c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4cbeee827d0b4889a5eb5753880d622e", async() => {
                 BeginContext(2839, 42, true);
                 WriteLiteral("<i class=\"glyphicon glyphicon-pencil\"></i>");
                 EndContext();
@@ -296,7 +296,7 @@ using pim2.Models;
             WriteLiteral(" |\r\n                        ");
             EndContext();
             BeginContext(2913, 122, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f5b048ca315f4307884b8886dfaa0da2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c487f3496c7643aa96847fd6fc3aba84", async() => {
                 BeginContext(2990, 41, true);
                 WriteLiteral("<i class=\"glyphicon glyphicon-trash\"></i>");
                 EndContext();

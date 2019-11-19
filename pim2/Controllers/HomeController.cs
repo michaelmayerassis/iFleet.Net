@@ -91,6 +91,11 @@ namespace pim2.Controllers
             return RedirectToAction("Index", "Empresas");
         }
 
+        public IActionResult CreateEmpresas()
+        {
+            return RedirectToAction("Create", "Empresas");
+        }
+
         public IActionResult Motoristas()
         {
             return RedirectToAction("Index", "Motoristas");

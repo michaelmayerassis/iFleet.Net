@@ -58,7 +58,7 @@ namespace pim2.Controllers
         // GET: Veiculoes/Create
         public IActionResult Create()
         {
-            ViewData["Empresa_Id"] = new SelectList(_context.Set<Empresa>(), "Id", "Id");
+            ViewData["Empresa_Id"] = new SelectList(_context.Set<Empresa>(), "Id", "nome");
             return View();
         }
 
@@ -75,7 +75,7 @@ namespace pim2.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["Empresa_Id"] = new SelectList(_context.Set<Empresa>(), "Id", "Id", veiculo.Empresa_Id);
+            ViewData["Empresa_Id"] = new SelectList(_context.Set<Empresa>(), "Id", "nome", veiculo.Empresa_Id);
             return View(veiculo);
         }
 
@@ -92,7 +92,7 @@ namespace pim2.Controllers
             {
                 return NotFound();
             }
-            ViewData["Empresa_Id"] = new SelectList(_context.Set<Empresa>(), "Id", "Id", veiculo.Empresa_Id);
+            ViewData["Empresa_Id"] = new SelectList(_context.Set<Empresa>(), "Id", "nome", veiculo.Empresa_Id);
             return View(veiculo);
         }
 
@@ -128,7 +128,7 @@ namespace pim2.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["Empresa_Id"] = new SelectList(_context.Set<Empresa>(), "Id", "Id", veiculo.Empresa_Id);
+            ViewData["Empresa_Id"] = new SelectList(_context.Set<Empresa>(), "Id", "nome", veiculo.Empresa_Id);
             return View(veiculo);
         }
 

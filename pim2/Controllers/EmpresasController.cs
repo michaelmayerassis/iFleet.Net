@@ -12,7 +12,7 @@ using pim2.Models;
 
 namespace pim2.Controllers
 {
-    [Authorize]
+    
     public class EmpresasController : Controller
     {
         private readonly EmpresaContext _context;
@@ -21,19 +21,21 @@ namespace pim2.Controllers
         {
             _context = context;
         }
-
+        [Authorize]
         public IActionResult Home()
         {
             return RedirectToAction("Home", "Home");
         }
 
         // GET: Empresas
+        [Authorize]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Empresas.ToListAsync());
         }
 
         // GET: Empresas/Details/5
+        [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -74,6 +76,7 @@ namespace pim2.Controllers
         }
 
         // GET: Empresas/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -94,6 +97,7 @@ namespace pim2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> Edit(int id, [Bind("Id,nome,CNPJ,telefone,email,endereco,numero,cidade,bairro")] Empresa empresa)
         {
             if (id != empresa.Id)
@@ -125,6 +129,7 @@ namespace pim2.Controllers
         }
 
         // GET: Empresas/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -143,6 +148,7 @@ namespace pim2.Controllers
         }
 
         // POST: Empresas/Delete/5
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -169,6 +175,7 @@ namespace pim2.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> LoginPage(Empresa empresa)
         {
             var empresaLogin = await _context.Empresas

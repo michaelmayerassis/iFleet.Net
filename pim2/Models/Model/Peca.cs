@@ -11,7 +11,7 @@ namespace pim2.Models
     public class Peca
     {
         [Required]
-        [Display(Name = "Nome"), StringLength(50, MinimumLength = 1)]
+        [Display(Name = "Nome"), StringLength(50)]
         public string Nome { get; set; }
 
         [Key]
@@ -32,5 +32,5 @@ namespace pim2.Models
         public int? EstoqueMinimo { get; set; }
 
         public decimal Valor { get; set; }
-}
+    }
 }

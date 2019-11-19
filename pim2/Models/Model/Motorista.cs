@@ -13,17 +13,52 @@ namespace pim2.Models
     {
         [Key]
         public int Id { get; set; }
+
+        [Required]
+        [StringLength(11)]
         public string CPF { get; set; }
+
+        [Required]
+        [StringLength(250)]
         public string Nome { get; set; }
+
+        [Required]
+        [StringLength(50)]
         public string CNH { get; set; }
+
+        [Required]
+        [StringLength(50)]
         public string Categoria_Cnh { get; set; }
+
+
+        [DataType(DataType.Date)]
+        [StringLength(8, MinimumLength = 8)]
         public DateTime Dt_Nascimento { get; set; }
+
+        [Required]
+        [StringLength(250)]
         public string Exame_medico { get; set; }
+
+        [Required]
+        [StringLength(250)]
         public string email { get; set; }
+
+        [Required]
+        [StringLength(150)]
         public string endereco { get; set; }
+
+        [Required]
         public int numero { get; set; }
+
+        [Required]
+        [StringLength(150)]
         public string cidade { get; set; }
+
+        [Required]
+        [StringLength(150)]
         public string Bairro { get; set; }
+
+        [Required]
         public int CEP { get; set; }
     }
 }

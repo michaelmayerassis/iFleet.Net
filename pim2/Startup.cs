@@ -59,7 +59,7 @@ namespace pim2
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            // Definindo a cultura padrão: pt-BR
+            // Definindo a cultura
             var supportedCultures = new[]
         {
             new CultureInfo("en-US"),

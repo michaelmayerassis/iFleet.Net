@@ -62,13 +62,22 @@ namespace iFleetWeb.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Nome,Id,Descricao,Prateleira,Quantidade,EstoqueMinimo,Valor")] Peca peca)
         {
-            if (ModelState.IsValid)
+            var pecas = await _context.Pecas.FirstOrDefaultAsync(a => a.Nome == peca.Nome);
+            if (pecas != null)
             {
-                _context.Add(peca);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                ViewBag.Erro = "já contém está peça cadastrada!";
+            }
+            else
+            {
+                if (ModelState.IsValid)
+                {
+                    _context.Add(peca);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
             }
             return View(peca);
+                
         }
 
         // GET: Pecas/Edit/5
@@ -94,30 +103,38 @@ namespace iFleetWeb.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Nome,Id,Descricao,Prateleira,Quantidade,EstoqueMinimo,Valor")] Peca peca)
         {
-            if (id != peca.Id)
+            var pecas = await _context.Pecas.FirstOrDefaultAsync(a => a.Nome == peca.Nome && a.Id != id);
+            if (pecas != null)
             {
-                return NotFound();
+                ViewBag.Erro = "já contém está peça cadastrada!";
             }
-
-            if (ModelState.IsValid)
+            else
             {
-                try
+                if (id != peca.Id)
                 {
-                    _context.Update(peca);
-                    await _context.SaveChangesAsync();
+                    return NotFound();
                 }
-                catch (DbUpdateConcurrencyException)
+
+                if (ModelState.IsValid)
                 {
-                    if (!PecaExists(peca.Id))
+                    try
                     {
-                        return NotFound();
+                        _context.Update(peca);
+                        await _context.SaveChangesAsync();
                     }
-                    else
+                    catch (DbUpdateConcurrencyException)
                     {
-                        throw;
+                        if (!PecaExists(peca.Id))
+                        {
+                            return NotFound();
+                        }
+                        else
+                        {
+                            throw;
+                        }
                     }
+                    return RedirectToAction(nameof(Index));
                 }
-                return RedirectToAction(nameof(Index));
             }
             return View(peca);
         }
