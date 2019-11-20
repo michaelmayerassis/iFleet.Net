@@ -7,24 +7,25 @@
         <h2>Usuário @User.Identity.Name</h2>
         <br><br>
         <a href="~/Home/Logout" class="btn btn-warning">Realizar o logout</a>
+        <a href="~/Home/Edit" class="btn btn-warning">Editar conta</a>
         <div class="userPage__menu">
-            
+
             <div class="userPage__card">
                 <div class="userPage__card__image">
-                    <img  src="~/images/empresa.gif"/>
+                    <img src="~/images/empresa.gif" />
                 </div>
                 <div class="userPage__card__title">
-                    <a asp-action="Empresas" class="btn-default">Empresas</a>
+                    <a asp-action="Index" class="btn-default">Empresas</a>
                 </div>
             </div>
 
-            <a  asp-action="Motoristas">
+            <a asp-action="Motoristas">
                 <div class="userPage__card" asp-action="Motoristas">
                     <div class="userPage__card__image">
                         <img src="~/images/motorista.gif" />
                     </div>
                     <div class="userPage__card__title">
-                        <p  class="btn-default">Cadastro de motoristas</p>
+                        <p class="btn-default">Cadastro de motoristas</p>
                     </div>
                 </div>
             </a>
@@ -47,7 +48,7 @@
                 </div>
             </div>
         </div>
-        
+
 
     </center>
 

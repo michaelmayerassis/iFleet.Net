@@ -164,7 +164,6 @@ C:\Users\55169\Downloads\pim\iFleet.Net\pim2\bin\Debug\netcoreapp2.1\iFleetWeb.d
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\bin\Debug\netcoreapp2.1\iFleetWeb.pdb
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\bin\Debug\netcoreapp2.1\iFleetWeb.Views.dll
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\bin\Debug\netcoreapp2.1\iFleetWeb.Views.pdb
-C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.csprojAssemblyReference.cache
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.RazorAssemblyInfo.cache
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.RazorAssemblyInfo.cs
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.AssemblyInfoInputs.cache
@@ -172,12 +171,12 @@ C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.A
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.TagHelpers.input.cache
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.TagHelpers.output.cache
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.RazorCoreGenerate.cache
-C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Empresas\Create.cshtml.g.cs
-C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Empresas\Delete.cshtml.g.cs
-C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Empresas\Details.cshtml.g.cs
-C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Empresas\Edit.cshtml.g.cs
-C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Empresas\Index.cshtml.g.cs
+C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Create.cshtml.g.cs
+C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Delete.cshtml.g.cs
+C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Details.cshtml.g.cs
+C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Edit.cshtml.g.cs
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Home.cshtml.g.cs
+C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\LoginPage.cshtml.g.cs
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\UserPage.cshtml.g.cs
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Motoristas\Create.cshtml.g.cs
