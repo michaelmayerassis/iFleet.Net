@@ -65,11 +65,19 @@ namespace pim2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,CPF,Nome,CNH,Categoria_Cnh,Dt_Nascimento,Exame_medico,email,endereco,numero,cidade,Bairro,CEP")] Motorista motorista)
         {
-            if (ModelState.IsValid)
+            var motoristas = await _context.Motoristas.FirstOrDefaultAsync(m => m.CPF == motorista.CPF || m.CNH == motorista.CNH);
+            if (motoristas != null)
             {
-                _context.Add(motorista);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                ViewBag.Erro = "CPF ou CNH já cadastrado!";
+            }
+            else
+            {
+                if (ModelState.IsValid)
+                {
+                    _context.Add(motorista);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
             }
             return View(motorista);
         }
@@ -97,30 +105,38 @@ namespace pim2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,CPF,Nome,CNH,Categoria_Cnh,Dt_Nascimento,Exame_medico,email,endereco,numero,cidade,Bairro,CEP")] Motorista motorista)
         {
-            if (id != motorista.Id)
+            var motoristas = await _context.Motoristas.FirstOrDefaultAsync(m => (m.CPF == motorista.CPF || m.CNH == motorista.CNH) && m.Id != id);
+            if (motoristas != null)
             {
-                return NotFound();
+                ViewBag.Erro = "CPF ou CNH já cadastrado!";
             }
-
-            if (ModelState.IsValid)
+            else
             {
-                try
+                if (id != motorista.Id)
                 {
-                    _context.Update(motorista);
-                    await _context.SaveChangesAsync();
+                    return NotFound();
                 }
-                catch (DbUpdateConcurrencyException)
+
+                if (ModelState.IsValid)
                 {
-                    if (!MotoristaExists(motorista.Id))
+                    try
                     {
-                        return NotFound();
+                        _context.Update(motorista);
+                        await _context.SaveChangesAsync();
                     }
-                    else
+                    catch (DbUpdateConcurrencyException)
                     {
-                        throw;
+                        if (!MotoristaExists(motorista.Id))
+                        {
+                            return NotFound();
+                        }
+                        else
+                        {
+                            throw;
+                        }
                     }
+                    return RedirectToAction(nameof(Index));
                 }
-                return RedirectToAction(nameof(Index));
             }
             return View(motorista);
         }

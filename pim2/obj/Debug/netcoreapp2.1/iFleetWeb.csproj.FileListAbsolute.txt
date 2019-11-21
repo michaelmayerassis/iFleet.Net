@@ -176,7 +176,6 @@ C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Details.cshtml.g.cs
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Edit.cshtml.g.cs
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Home.cshtml.g.cs
-C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\LoginPage.cshtml.g.cs
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\UserPage.cshtml.g.cs
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Motoristas\Create.cshtml.g.cs
@@ -206,3 +205,5 @@ C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.V
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.dll
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.pdb
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.csproj.CopyComplete
+C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.csprojAssemblyReference.cache
+C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Lista.cshtml.g.cs

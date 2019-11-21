@@ -27,9 +27,8 @@ namespace pim2.Models
         [StringLength(4, MinimumLength = 4)]
         public String Modelo { get; set; }
 
-        [Required]
-        [StringLength(4, MinimumLength = 4)]
-        public Int32 Ano { get; set; }
+        //[StringLength(4, MinimumLength = 4)]
+        public int Ano { get; set; }
 
         [Required]
         [StringLength(7, MinimumLength = 7)]

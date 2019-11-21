@@ -22,12 +22,13 @@ namespace pim2.Controllers
             _context = context;
         }
 
-        // GET: Home/Details/5
+        // GET: Home/
         public IActionResult Home()
         {
             return View();
         }
 
+        //GET : LoginPage/
         public IActionResult LoginPage()
         {
             if (User.Identity.IsAuthenticated)
@@ -136,10 +137,10 @@ namespace pim2.Controllers
         public async Task<IActionResult> Edit([Bind("Id,nome,CNPJ,telefone,email,endereco,numero,cidade,bairro,senha")] Empresa empresa)
         {
             int id = Ok;
-            var empresas = await _context.Empresas.FirstOrDefaultAsync(e => e.email == empresa.email && e.Id != id);
+            var empresas = await _context.Empresas.FirstOrDefaultAsync(e => (e.email == empresa.email || e.CNPJ == empresa.CNPJ) && e.Id != id);
             if (empresas != null)
             {
-                ViewBag.Erro = "já contém está peça cadastrada!";
+                ViewBag.Erro = "Email ou CNPJ já cadastrado!";
             }
             else
             {
@@ -207,7 +208,7 @@ namespace pim2.Controllers
 
         // GET: Empresas
         [Authorize]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Lista()
         {
             return View(await _context.Empresas.ToListAsync());
         }
@@ -231,7 +232,6 @@ namespace pim2.Controllers
             return View(empresa);
         }
 
-        [Authorize]
         // GET: Empresas/Create
         public IActionResult Create()
         {
@@ -240,16 +240,14 @@ namespace pim2.Controllers
 
         // POST: Empresas/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,nome,CNPJ,telefone,email,endereco,numero,cidade,bairro,senha")] Empresa empresa)
         {
-            var empresas = await _context.Empresas.FirstOrDefaultAsync(e => e.email == empresa.email);
+            var empresas = await _context.Empresas.FirstOrDefaultAsync(e => e.email == empresa.email || e.CNPJ == empresa.CNPJ);
             if (empresas != null)
             {
-                ViewBag.Erro = "já contém este email cadastrado!";
+                ViewBag.Erro = "Email ou CNPJ já cadastrado!";
             }
             else
             {

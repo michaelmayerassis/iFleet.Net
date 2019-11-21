@@ -69,11 +69,19 @@ namespace pim2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Empresa_Id,Nome,Cor,Modelo,Ano,Placa,Renavan,Marca")] Veiculo veiculo)
         {
-            if (ModelState.IsValid)
+            var veiculos = await _context.Veiculo.FirstOrDefaultAsync(v => v.Placa == veiculo.Placa || v.Renavan == veiculo.Renavan);
+            if (veiculos != null)
             {
-                _context.Add(veiculo);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                ViewBag.Erro = "Renavan já cadastrado!";
+            }
+            else
+            {
+                if (ModelState.IsValid)
+                {
+                    _context.Add(veiculo);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
             }
             ViewData["Empresa_Id"] = new SelectList(_context.Set<Empresa>(), "Id", "nome", veiculo.Empresa_Id);
             return View(veiculo);
@@ -103,30 +111,38 @@ namespace pim2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Empresa_Id,Nome,Cor,Modelo,Ano,Placa,Renavan,Marca")] Veiculo veiculo)
         {
-            if (id != veiculo.Id)
+            var veiculos = await _context.Veiculo.FirstOrDefaultAsync(v => (v.Placa == veiculo.Placa || v.Renavan == veiculo.Renavan) && v.Id != id);
+            if (veiculos != null)
             {
-                return NotFound();
+                ViewBag.Erro = "Renavan já cadastrado!";
             }
-
-            if (ModelState.IsValid)
+            else
             {
-                try
+                if (id != veiculo.Id)
                 {
-                    _context.Update(veiculo);
-                    await _context.SaveChangesAsync();
+                    return NotFound();
                 }
-                catch (DbUpdateConcurrencyException)
+
+                if (ModelState.IsValid)
                 {
-                    if (!VeiculoExists(veiculo.Id))
+                    try
                     {
-                        return NotFound();
+                        _context.Update(veiculo);
+                        await _context.SaveChangesAsync();
                     }
-                    else
+                    catch (DbUpdateConcurrencyException)
                     {
-                        throw;
+                        if (!VeiculoExists(veiculo.Id))
+                        {
+                            return NotFound();
+                        }
+                        else
+                        {
+                            throw;
+                        }
                     }
+                    return RedirectToAction(nameof(Index));
                 }
-                return RedirectToAction(nameof(Index));
             }
             ViewData["Empresa_Id"] = new SelectList(_context.Set<Empresa>(), "Id", "nome", veiculo.Empresa_Id);
             return View(veiculo);

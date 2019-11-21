@@ -32,7 +32,6 @@ namespace pim2.Models
 
 
         [DataType(DataType.Date)]
-        [StringLength(8, MinimumLength = 8)]
         public DateTime Dt_Nascimento { get; set; }
 
         [Required]
