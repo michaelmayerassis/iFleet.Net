@@ -14,10 +14,12 @@ namespace pim2.Controllers
     public class VeiculoesController : Controller
     {
         private readonly VeiculoContext _context;
+        private readonly EmpresaContext _empresaContext;
 
-        public VeiculoesController(VeiculoContext context)
+        public VeiculoesController(VeiculoContext context, EmpresaContext empresaContext)
         {
             _context = context;
+            _empresaContext = empresaContext;
         }
         public IActionResult Home()
         {
@@ -30,10 +32,19 @@ namespace pim2.Controllers
         }
 
         // GET: Veiculoes
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
+            var empresas = _empresaContext.Empresas.FirstOrDefault(e => e.email == User.Identity.Name);
             var veiculoContext = _context.Veiculo.Include(v => v.Empresa);
-            return View(await veiculoContext.ToListAsync());
+            List<Veiculo> veiculos = new List<Veiculo>();
+            foreach (Veiculo item in veiculoContext)
+            {
+                if (item.Empresa.Id == empresas.Id)
+                {
+                    veiculos.Add(item);
+                }
+            }
+            return View(veiculos);
         }
 
         // GET: Veiculoes/Details/5
@@ -58,7 +69,8 @@ namespace pim2.Controllers
         // GET: Veiculoes/Create
         public IActionResult Create()
         {
-            ViewData["Empresa_Id"] = new SelectList(_context.Set<Empresa>(), "Id", "nome");
+            var empresas = _empresaContext.Empresas.FirstOrDefault(e => e.email == User.Identity.Name);
+            ViewBag.Result = empresas.Id;
             return View();
         }
 
@@ -83,7 +95,7 @@ namespace pim2.Controllers
                     return RedirectToAction(nameof(Index));
                 }
             }
-            ViewData["Empresa_Id"] = new SelectList(_context.Set<Empresa>(), "Id", "nome", veiculo.Empresa_Id);
+            //ViewData["Empresa_Id"] = new SelectList(_context.Set<Empresa>(), "Id", "nome", veiculo.Empresa_Id);
             return View(veiculo);
         }
 

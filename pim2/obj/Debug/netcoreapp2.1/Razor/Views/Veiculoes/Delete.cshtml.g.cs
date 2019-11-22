@@ -69,7 +69,7 @@ using pim2.Models;
             WriteLiteral("\r\n    <div class=\"header-views\">\r\n\r\n        <h1 class=\"title-font\">Controle de veículos</h1>\r\n\r\n        <nav class=\"header-nav\">\r\n            <ul class=\"header-nav-menu\">\r\n                <li class=\"header-menu-item\">");
             EndContext();
             BeginContext(289, 58, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0f59565d7f164f36adaf1692c5ab733c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a470cfaa182e419a8d9d6dc58c941cb2", async() => {
                 BeginContext(337, 6, true);
                 WriteLiteral("Voltar");
                 EndContext();
@@ -252,12 +252,12 @@ using pim2.Models;
             WriteLiteral("\r\n        </dd>\r\n    </dl>\r\n    \r\n    ");
             EndContext();
             BeginContext(1918, 186, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c94a4a6bed9648a9900c6bcb75826832", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f0389143897b4a1e9090dccb517ed1e6", async() => {
                 BeginContext(1944, 10, true);
                 WriteLiteral("\r\n        ");
                 EndContext();
                 BeginContext(1954, 36, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "183c38d202d4459994a6e7a294466ce1", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "54cbef28aeef487db7fe6c2bd0628b58", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
