@@ -84,6 +84,7 @@ namespace pim2.Controllers
         public async Task<IActionResult> Create([Bind("Id,CPF,Nome,CNH,Categoria_Cnh,Dt_Nascimento,Exame_medico,email,endereco,numero,cidade,Bairro,CEP")] Motorista motorista)
         {
             var motoristas = await _context.Motoristas.FirstOrDefaultAsync(m => m.CPF == motorista.CPF || m.CNH == motorista.CNH);
+            motorista.CPF = motorista.CPF.Replace(".", "").Replace("-", "");
             if (motoristas != null)
             {
                 ViewBag.Erro = "CPF ou CNH já cadastrado!";
