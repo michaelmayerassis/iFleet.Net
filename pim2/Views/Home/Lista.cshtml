@@ -12,7 +12,7 @@
 
     <nav class="header-nav">
         <ul class="header-nav-menu">
-            <li class="header-menu-item"><a asp-action="UserPage" class="header-btn-portal">Voltar</a></li>
+            <li class="header-menu-item"><a asp-action="UserPageIndex" class="header-btn-portal">Voltar</a></li>
         </ul>
     </nav>
 </div>
@@ -77,7 +77,7 @@
                         @Html.DisplayFor(modelItem => item.bairro)
                     </td>
                     <td>
-                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-default btn-gold"><i class="glyphicon glyphicon-align-justify"></i></a>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-default btn-gold"><i class="glyphicon glyphicon-info-sign"></i></a>
                     </td>
                 </tr>
             }
