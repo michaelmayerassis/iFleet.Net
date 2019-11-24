@@ -108,7 +108,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label asp-for="CEP" class="control-label"></label>
-                            <input asp-for="CEP" class="form-control" />
+                            <input asp-for="CEP" class="form-control cep" />
                             <span asp-validation-for="CEP" class="text-danger"></span>
                         </div>
                     </div>
@@ -129,11 +129,6 @@
     </div>
 </div>
 
-<script>
-    $(document).ready(function(){
-        $('.mask-cpf').mask('000.000.000-00', {reverse: true});
-    });
-</script>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
