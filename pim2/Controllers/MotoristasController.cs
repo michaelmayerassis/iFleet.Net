@@ -29,9 +29,27 @@ namespace pim2.Controllers
             return RedirectToAction("UserPage", "Home");
         }
         // GET: Motoristas
-        public async Task<IActionResult> Index()
+        public IActionResult Index(string cpf)
         {
-            return View(await _context.Motoristas.ToListAsync());
+            var motoristas1 = _context.Motoristas.ToList();
+            List<Motorista> motoristas = new List<Motorista>();
+            motoristas = motoristas1;
+            if (!String.IsNullOrEmpty(cpf))
+            {
+                foreach (Motorista item in motoristas1.ToList())
+                {
+                    motoristas.Remove(item);
+                }
+                motoristas.Add(_context.Motoristas.FirstOrDefault(m => m.CPF == cpf));
+                ViewBag.Todos = 1;
+            }
+            else
+            {
+                motoristas = motoristas1;
+                ViewBag.Todos = 0;
+            }
+            ViewBag.Id = motoristas;
+            return View(motoristas);
         }
 
         // GET: Motoristas/Details/5
