@@ -83,21 +83,25 @@ namespace pim2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,CPF,Nome,CNH,Categoria_Cnh,Dt_Nascimento,Exame_medico,email,endereco,numero,cidade,Bairro,CEP")] Motorista motorista)
         {
-            var motoristas = await _context.Motoristas.FirstOrDefaultAsync(m => m.CPF == motorista.CPF || m.CNH == motorista.CNH);
-            motorista.CPF = motorista.CPF.Replace(".", "").Replace("-", "");
-            if (motoristas != null)
+            if (IsCpf(motorista.CPF))
             {
-                ViewBag.Erro = "CPF ou CNH já cadastrado!";
-            }
-            else
-            {
-                if (ModelState.IsValid)
+                var motoristas = await _context.Motoristas.FirstOrDefaultAsync(m => m.CPF == motorista.CPF || m.CNH == motorista.CNH);
+                motorista.CPF = motorista.CPF.Replace(".", "").Replace("-", "");
+                if (motoristas != null)
                 {
-                    _context.Add(motorista);
-                    await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
+                    ViewBag.Erro = "CPF ou CNH já cadastrado!";
+                }
+                else
+                {
+                    if (ModelState.IsValid)
+                    {
+                        _context.Add(motorista);
+                        await _context.SaveChangesAsync();
+                        return RedirectToAction(nameof(Index));
+                    }
                 }
             }
+            ViewBag.Cpf = "CPF invalido";
             return View(motorista);
         }
 
@@ -124,39 +128,43 @@ namespace pim2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,CPF,Nome,CNH,Categoria_Cnh,Dt_Nascimento,Exame_medico,email,endereco,numero,cidade,Bairro,CEP")] Motorista motorista)
         {
-            var motoristas = await _context.Motoristas.FirstOrDefaultAsync(m => (m.CPF == motorista.CPF || m.CNH == motorista.CNH) && m.Id != id);
-            if (motoristas != null)
+            if (IsCpf(motorista.CPF))
             {
-                ViewBag.Erro = "CPF ou CNH já cadastrado!";
-            }
-            else
-            {
-                if (id != motorista.Id)
+                var motoristas = await _context.Motoristas.FirstOrDefaultAsync(m => (m.CPF == motorista.CPF || m.CNH == motorista.CNH) && m.Id != id);
+                if (motoristas != null)
                 {
-                    return NotFound();
+                    ViewBag.Erro = "CPF ou CNH já cadastrado!";
                 }
+                else
+                {
+                    if (id != motorista.Id)
+                    {
+                        return NotFound();
+                    }
 
-                if (ModelState.IsValid)
-                {
-                    try
+                    if (ModelState.IsValid)
                     {
-                        _context.Update(motorista);
-                        await _context.SaveChangesAsync();
-                    }
-                    catch (DbUpdateConcurrencyException)
-                    {
-                        if (!MotoristaExists(motorista.Id))
+                        try
                         {
-                            return NotFound();
+                            _context.Update(motorista);
+                            await _context.SaveChangesAsync();
                         }
-                        else
+                        catch (DbUpdateConcurrencyException)
                         {
-                            throw;
+                            if (!MotoristaExists(motorista.Id))
+                            {
+                                return NotFound();
+                            }
+                            else
+                            {
+                                throw;
+                            }
                         }
+                        return RedirectToAction(nameof(Index));
                     }
-                    return RedirectToAction(nameof(Index));
                 }
             }
+            ViewBag.Cpf = "CPF invalido";
             return View(motorista);
         }
 
@@ -192,6 +200,42 @@ namespace pim2.Controllers
         private bool MotoristaExists(int id)
         {
             return _context.Motoristas.Any(e => e.Id == id);
+        }
+
+        public bool IsCpf(string cpf)
+        {
+            int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+            int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+            string tempCpf;
+            string digito;
+            int soma;
+            int resto;
+            cpf = cpf.Trim();
+            cpf = cpf.Replace(".", "").Replace("-", "");
+            if (cpf.Length != 11)
+                return false;
+            tempCpf = cpf.Substring(0, 9);
+            soma = 0;
+
+            for (int i = 0; i < 9; i++)
+                soma += int.Parse(tempCpf[i].ToString()) * multiplicador1[i];
+            resto = soma % 11;
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
+            digito = resto.ToString();
+            tempCpf = tempCpf + digito;
+            soma = 0;
+            for (int i = 0; i < 10; i++)
+                soma += int.Parse(tempCpf[i].ToString()) * multiplicador2[i];
+            resto = soma % 11;
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
+            digito = digito + resto.ToString();
+            return cpf.EndsWith(digito);
         }
     }
 }

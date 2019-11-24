@@ -26,6 +26,10 @@
                         <div class="form-group">
                             <label asp-for="CPF" class="control-label"></label>
                             <input asp-for="CPF" class="form-control mask-cpf" />
+                            @if (ViewBag.Cpf != null)
+                            {
+                                <span style="text-decoration-color:red"> @ViewBag.Cpf</span>
+                            }
                             <span asp-validation-for="CPF" class="text-danger"></span>
                         </div>
                     </div>
