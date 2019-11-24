@@ -10,43 +10,41 @@
         <a href="~/Home/Edit" class="btn btn-warning">Editar conta</a>
         <div class="userPage__menu">
 
-            <div class="userPage__card">
+            <a asp-action="Lista" class="userPage__card">
                 <div class="userPage__card__image">
-                    <img src="~/images/empresa.gif" />
+                    <img src="~/images/empresa2.gif" />
                 </div>
                 <div class="userPage__card__title">
-                    <a asp-action="Lista" class="btn-default">Empresas</a>
-                </div>
-            </div>
-
-            <a asp-action="Motoristas">
-                <div class="userPage__card" asp-action="Motoristas">
-                    <div class="userPage__card__image">
-                        <img src="~/images/motorista.gif" />
-                    </div>
-                    <div class="userPage__card__title">
-                        <p class="btn-default">Cadastro de motoristas</p>
-                    </div>
+                    <p>Visualizar Empresa</p>
                 </div>
             </a>
 
-            <div class="userPage__card">
+            <a asp-action="Motoristas" class="userPage__card">
+                <div class="userPage__card__image">
+                    <img src="~/images/motorista.gif" />
+                </div>
+                <div class="userPage__card__title">
+                    <p class="btn-default">Cadastro de motoristas</p>
+                </div>
+            </a>
+
+            <a asp-action="Veiculos" class="userPage__card">
                 <div class="userPage__card__image">
                     <img src="~/images/carro.gif" />
                 </div>
                 <div class="userPage__card__title">
-                    <a asp-action="Veiculos" class="btn-default">Cadastro de veiculos</a>
+                    <p>Cadastro de Veículos</p>
                 </div>
-            </div>
+            </a>
 
-            <div class="userPage__card">
+            <a asp-action="Pecas" class="userPage__card">
                 <div class="userPage__card__image">
-
+                    <img src="~/images/pecas.gif" />
                 </div>
                 <div class="userPage__card__title">
-                    <a asp-action="Pecas" class="btn-default">Cadastro de peças</a>
+                    <p>Cadastro de Peças</p>
                 </div>
-            </div>
+            </a>
         </div>
 
 

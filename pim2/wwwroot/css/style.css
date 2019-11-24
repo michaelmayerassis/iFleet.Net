@@ -54,8 +54,15 @@ body{
 }
 
 .header-menu-item{
-    font-size: 1.125rem;
     text-transform: uppercase;
+}
+.header-menu-item a {
+    text-decoration: none;
+}
+.header-menu-item .header-menu-item-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
 }
 
 li.header-menu-item + .header-menu-item{

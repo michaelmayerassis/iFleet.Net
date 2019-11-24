@@ -66,11 +66,6 @@ C:\Users\joaovizu\Desktop\iFleet\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\iFleetW
 C:\Users\joaovizu\Desktop\iFleet\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.TagHelpers.input.cache
 C:\Users\joaovizu\Desktop\iFleet\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.TagHelpers.output.cache
 C:\Users\joaovizu\Desktop\iFleet\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.RazorCoreGenerate.cache
-C:\Users\joaovizu\Desktop\iFleet\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Empresas\Create.g.cshtml.cs
-C:\Users\joaovizu\Desktop\iFleet\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Empresas\Delete.g.cshtml.cs
-C:\Users\joaovizu\Desktop\iFleet\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Empresas\Details.g.cshtml.cs
-C:\Users\joaovizu\Desktop\iFleet\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Empresas\Edit.g.cshtml.cs
-C:\Users\joaovizu\Desktop\iFleet\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Empresas\Index.g.cshtml.cs
 C:\Users\joaovizu\Desktop\iFleet\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Home.g.cshtml.cs
 C:\Users\joaovizu\Desktop\iFleet\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\LoginPage.g.cshtml.cs
 C:\Users\joaovizu\Desktop\iFleet\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\UserPage.g.cshtml.cs
@@ -207,3 +202,9 @@ C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.p
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.csproj.CopyComplete
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.csprojAssemblyReference.cache
 C:\Users\55169\Downloads\pim\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Lista.cshtml.g.cs
+C:\Users\joaovizu\Desktop\iFleet\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\iFleetWeb.csprojAssemblyReference.cache
+C:\Users\joaovizu\Desktop\iFleet\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Create.g.cshtml.cs
+C:\Users\joaovizu\Desktop\iFleet\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Delete.g.cshtml.cs
+C:\Users\joaovizu\Desktop\iFleet\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Details.g.cshtml.cs
+C:\Users\joaovizu\Desktop\iFleet\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Edit.g.cshtml.cs
+C:\Users\joaovizu\Desktop\iFleet\iFleet.Net\pim2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Lista.g.cshtml.cs
