@@ -1,9 +1,6 @@
 ﻿function initScrollSuave() {
     const linksInternos = document.querySelectorAll(".header-menu-item a[href^='#']");
 
-    console.log('teste')
-    console.log(linksInternos)
-
     function scrollToSection(event) {
         event.preventDefault();
         const href = event.currentTarget.getAttribute("href");
