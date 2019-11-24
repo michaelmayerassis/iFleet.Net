@@ -28,6 +28,11 @@ namespace pim2.Controllers
             return View();
         }
 
+        public IActionResult UserPageIndex()
+        {
+            return RedirectToAction("UserPage", "Home");
+        }
+
         //GET : LoginPage/
         public IActionResult LoginPage()
         {
