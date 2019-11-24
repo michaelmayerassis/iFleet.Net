@@ -19,14 +19,19 @@
 </div>
 @using (Html.BeginForm("Index", "Motoristas", FormMethod.Get))
 {
+<div class="container-fluid">
     <div style="width:480px">
-        <input id="cpf" type="text" style="margin-left:20px" name="cpf" value="" placeholder="Digite um cpf Valido" />
-        <input type="submit" value="Filtar" class="btn btn-success col-md-offset-1" />
-        @if (@ViewBag.Todos == 1)
-        {
-            <input type="submit" value="Todos" class="btn btn-success col-md-offset-1" />
-        }
+        <div class="form-inline">
+            <input id="cpf" type="text" name="cpf" value="" placeholder="Digite um CPF válido" class="form-control" />
+            <input type="submit" value="Filtar" class="btn btn-success col-md-offset-1" />
+            @if (@ViewBag.Todos == 1)
+            {
+                <input type="submit" value="Todos" class="btn btn-success col-md-offset-1" />
+            }
+        </div>
+        
     </div>
+</div>
     <br />
 }
 <div class="container-fluid">

@@ -15,7 +15,7 @@ namespace pim2.Models
         public int Id { get; set; }
 
         [Required]
-        [StringLength(11)]
+        [StringLength(15)]
         public string CPF { get; set; }
 
         [Required]
