@@ -101,7 +101,7 @@ namespace pim2.Controllers
                     }
                 }
             }
-            ViewBag.Cpf = "CPF invalido";
+            ViewBag.Cpf = "CPF inválido";
             return View(motorista);
         }
 
@@ -164,7 +164,7 @@ namespace pim2.Controllers
                     }
                 }
             }
-            ViewBag.Cpf = "CPF invalido";
+            ViewBag.Cpf = "CPF inválido";
             return View(motorista);
         }
 

@@ -22,11 +22,11 @@
 <div class="container-fluid">
     <div style="width:480px">
         <div class="form-inline">
-            <input id="cpf" type="text" name="cpf" value="" placeholder="Digite um CPF válido" class="form-control" />
-            <input type="submit" value="Filtar" class="btn btn-success col-md-offset-1" />
+            <input id="cpf" type="text" name="cpf" value="" placeholder="Digite um CPF válido" class="form-control" maxlength="11"/>
+            <input type="submit" value="Filtar" class="btn btn-success" />
             @if (@ViewBag.Todos == 1)
             {
-                <input type="submit" value="Todos" class="btn btn-success col-md-offset-1" />
+                <input type="submit" value="Todos" class="btn btn-primary" />
             }
         </div>
         
