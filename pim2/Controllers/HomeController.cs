@@ -94,7 +94,12 @@ namespace pim2.Controllers
         [Authorize]
         public IActionResult UserPage()
         {
-            return View();
+            var empresas = _context.Empresas.FirstOrDefault(e => e.email == User.Identity.Name);
+            if (empresas != null)
+            {
+                ViewBag.Nome = empresas.nome;
+            }
+                return View();
         }
 
         public async Task<IActionResult> Logout()
