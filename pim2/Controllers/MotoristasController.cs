@@ -30,25 +30,27 @@ namespace pim2.Controllers
         }
         // GET: Motoristas
         public IActionResult Index(string cpf)
-        {
-            var motoristas1 = _context.Motoristas.ToList();
+        {            
             List<Motorista> motoristas = new List<Motorista>();
-            motoristas = motoristas1;
+            motoristas = _context.Motoristas.ToList();
             if (!String.IsNullOrEmpty(cpf))
-            {
-                foreach (Motorista item in motoristas1.ToList())
+            {                
+                var isCpf = _context.Motoristas.FirstOrDefault(m => m.CPF == cpf.Replace(".", "").Replace("-", ""));
+                if (isCpf == null)
                 {
-                    motoristas.Remove(item);
+                    ViewBag.Todos = 0;
+                    ViewBag.CPF = "Digite um CPF valido!";
                 }
-                motoristas.Add(_context.Motoristas.FirstOrDefault(m => m.CPF == cpf));
-                ViewBag.Todos = 1;
-            }
-            else
-            {
-                motoristas = motoristas1;
-                ViewBag.Todos = 0;
-            }
-            ViewBag.Id = motoristas;
+                else
+                {
+                    foreach (Motorista item in _context.Motoristas.ToList())
+                    {
+                        motoristas.Remove(item);
+                    }
+                    motoristas.Add(_context.Motoristas.FirstOrDefault(m => m.CPF == cpf.Replace(".", "").Replace("-", "")));
+                    ViewBag.Todos = 1;
+                }
+            }          
             return View(motoristas);
         }
 
@@ -85,8 +87,8 @@ namespace pim2.Controllers
         {
             if (IsCpf(motorista.CPF))
             {
-                var motoristas = await _context.Motoristas.FirstOrDefaultAsync(m => m.CPF == motorista.CPF || m.CNH == motorista.CNH);
                 motorista.CPF = motorista.CPF.Replace(".", "").Replace("-", "");
+                var motoristas = await _context.Motoristas.FirstOrDefaultAsync(m => m.CPF == motorista.CPF || m.CNH == motorista.CNH);
                 if (motoristas != null)
                 {
                     ViewBag.Erro = "CPF ou CNH já cadastrado!";
@@ -130,6 +132,7 @@ namespace pim2.Controllers
         {
             if (IsCpf(motorista.CPF))
             {
+                motorista.CPF = motorista.CPF.Replace(".", "").Replace("-", "");
                 var motoristas = await _context.Motoristas.FirstOrDefaultAsync(m => (m.CPF == motorista.CPF || m.CNH == motorista.CNH) && m.Id != id);
                 if (motoristas != null)
                 {
